@@ -7,20 +7,21 @@
             "command": "g++",
             "args": [
                 "-g",
-                "${file}",
-                "-I", "C:/SDL2-2.30.6/include",  // Path to SDL2 include directory
-                "-L", "C:/SDL2-2.30.6/lib/x64",  // Path to SDL2 lib directory (x86 for 32-bit, x64 for 64-bit)
+                "main.cpp",
+                "IO.cpp",
+                "-I", "C:/SDL2-2.30.6/include",   // Path to SDL2 include directory
+                "-L", "C:/SDL2-2.30.6/lib/x64",   // Path to SDL2 lib directory (x64 for 64-bit)
                 "-lSDL2main",
                 "-lSDL2",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}/main.exe"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
             "problemMatcher": ["$gcc"],
-            "detail": "Build the current C++ file with SDL2."
+            "detail": "Build the C++ project with SDL2."
         }
     ]
 }

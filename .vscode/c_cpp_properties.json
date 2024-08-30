@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/SDL2-2.30.6/include"
+                "C:/SDL2-2.30.6/include",
+                "D:/Project/SDL_gfx-2.0.27"
             ],
             "defines": [
                 "_DEBUG",
