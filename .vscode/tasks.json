@@ -9,9 +9,11 @@
                 "-g",
                 "main.cpp",
                 "IO.cpp",
+                "Game.cpp",
+                "Board.cpp",
+                "Piece.cpp",
                 "-I", "C:/SDL2-2.30.6/include",   // Path to SDL2 include directory
                 "-L", "C:/SDL2-2.30.6/lib/x64",   // Path to SDL2 lib directory (x64 for 64-bit)
-                "-lSDL2main",
                 "-lSDL2",
                 "-o",
                 "${workspaceFolder}/main.exe"

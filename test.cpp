@@ -1,6 +1,6 @@
-#include "Piece.h"
+#include <iostream>
 
-int mPieces[7][4][5][5] = {
+const char mPieces[7][4][5][5] = {
     // Square
     {
         {{0, 0, 0, 0, 0},
@@ -107,6 +107,7 @@ int mPieces[7][4][5][5] = {
          {0, 1, 2, 0, 0},
          {0, 1, 0, 0, 0},
          {0, 0, 0, 0, 0}},
+
         {{0, 0, 0, 0, 0},
          {0, 1, 1, 0, 0},
          {0, 0, 2, 1, 0},
@@ -203,23 +204,33 @@ int mPiecesInitialPosition[7 /*kind */][4 /* r2otation */][2 /* position */] =
             {-2, -2}},
 };
 
-int Piece::getBlockType(int pPiece, int pRotation, int pX, int pY)
+int getBlockType(int pPiece, int pRotation, int pX, int pY)
 {
     return mPieces[pPiece][pRotation][pX][pY];
 }
 
 // returns the horizontal displacement
-int Piece::getXInitialPosition(int pPiece, int pRotation)
+int getXInitialPosition(int pPiece, int pRotation)
 {
     return mPiecesInitialPosition[pPiece][pRotation][0];
 }
 // returns the vertical displacement
-int Piece::getYInitialPosition(int pPiece, int pRotation)
+int getYInitialPosition(int pPiece, int pRotation)
 {
     return mPiecesInitialPosition[pPiece][pRotation][1];
 }
 
-Piece::Piece()
+int main()
 {
-    // Empty constructor
+    // for (int i = 0; i < 5; i++)
+    // {
+    //     for (int j = 0; j < 5; j++)
+    //     {
+    //         int x = getBlockType(2,3,3,3);
+    //         std::cout << "Block [" << i << "][" << j << "] blockType: " << x << std::endl;
+    //     }
+    // }
+
+    int x  = getBlockType(2,3,3,3);
+    std::cout << "Block [" << 3 << "][" << 3 << "] blockType: " << x << std::endl;
 }
